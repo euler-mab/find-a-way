@@ -1,3 +1,571 @@
-export default function Home() {
-  return <div>Hellow World</div>;
-}
+"use client";
+
+import { Button, Heading, Link, Text } from "@radix-ui/themes";
+import Hero from "./components/hero/Hero";
+import { FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa6";
+import Image from "next/image";
+
+const Home = () => {
+  const cards = [
+    {
+      title: "Video Interactive Guidance (VIG)",
+      description:
+        "VIG is an evidence-based intervention that uses video feedback to improve communication and relationships between parents or carers and children. By reviewing short video clips of positive interactions, families can reflect on their strengths and develop new ways to enhance their connections.",
+      image: "/vig.png",
+      alt: "Video Interactive Guidance (VIG) logo",
+    },
+    {
+      title: "Parent Support Groups",
+      description:
+        "Our Parent Support Groups provide a safe and welcoming space for parents to connect, share experiences, and receive guidance on a range of issues, from parenting challenges to emotional support. These groups foster a sense of community while offering practical advice from our experienced facilitators.",
+      image: "/support-group.png",
+      alt: "Parent Support Groups",
+    },
+    {
+      title: "Strength-Based Interventions",
+      description:
+        "Our strength-based interventions focus on identifying and building upon the unique strengths of each family and individual. This positive approach empowers families to harness their abilities and resources to overcome challenges and promote well-being, rather than focusing solely on areas of need.",
+      image: "/strength.png",
+      alt: "Video Interactive Guidance (VIG) logo",
+    },
+    {
+      title: "One-to-One Consultations",
+      description:
+        "We offer individual consultations for parents, carers, and families seeking personalised advice and support. These sessions provide an opportunity to discuss specific concerns about your child's development, emotional well-being, and behaviour. Our consultations are designed to offer problem-solving strategies and expert guidance tailored to your unique situation.",
+      image: "/consultations.png",
+      alt: "Parent Support Groups",
+    },
+  ];
+
+  return (
+    <main className="scroll-smooth">
+      {/* Hero Section */}
+      <section
+        id="hero"
+        className="min-h-[80vh] px-6 py-40"
+        style={{
+          backgroundImage:
+            "url('/u8696629956_illustration_stepping_stones_horizon_scandi_--v_6_2a696bc6-b9a6-4b03-9f04-a01febe9baa9_3.png')",
+          backgroundSize: "100%",
+        }}
+      >
+        <div className="max-w-4xl w-full mx-auto ">
+          <Hero />
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section
+        id="about-us"
+        className="flex px-6 py-24"
+        style={
+          {
+            // backgroundColor: "#f5f5f5",
+          }
+        }
+      >
+        <div className="max-w-4xl w-full mx-auto ">
+          <div className="mb-12">
+            <Heading mb="2" size="8">
+              About us
+            </Heading>
+            <Heading mb="8" size="5" weight="light">
+              Learn more about our role in the community
+            </Heading>
+          </div>
+
+          <Text size="3" as="p">
+            At Find A Way, we believe every family should have the support they
+            need, when they need it, and be part of a community that's there for
+            them.
+          </Text>
+          <br />
+          <Text mb="4" size="3" as="p">
+            We are committed to providing a wide range of interventions for
+            families and individuals, including pre-natal support, parent
+            support groups, individual consultations, interventions, and
+            assessments. Our flexible and dynamic approach ensures that we
+            respond to the specific needs of families, carers, and children in
+            real-time.We understand the importance of early intervention in
+            improving outcomes for families and children. That's why all our
+            interventions are evidence-based and rooted in strength-based
+            practice, empowering families by focusing on their inherent
+            strengths and resources.
+          </Text>
+          <br />
+          <Heading mb="4" size="5">
+            Our approach
+          </Heading>
+          <Text size="3" as="p">
+            Our services are grounded in proven theories and best practice
+            models, designed to be adaptable and suitable for those facing
+            multiple adversities. Whether families are dealing with trauma,
+            attachment issues, or social, emotional, and behavioral challenges,
+            our support is tailored to promote positive, lasting outcomes.
+          </Text>
+          <br />
+          <Heading mb="4" size="5">
+            Our practitioners
+          </Heading>
+          <Text size="3" as="p">
+            All of our practitioners have specialist knowledge and extensive
+            experience working with vulnerable families, including looked-after
+            children and those with special educational needs. Our team is
+            highly skilled in supporting individuals who have experienced
+            trauma, disruptions in attachment, and those with complex social and
+            emotional needs.
+          </Text>
+          <br />
+          <Text size="3" as="p">
+            We combine our expertise with a compassionate, person-centered
+            approach to help families overcome challenges and achieve long-term
+            well-being. Contact us today to learn more about how we can support
+            your family.
+          </Text>
+          <br />
+          <div className="flex justify-start mt-8">
+            <div className="flex flex-row">
+              <div className="mr-2">
+                <Button size="3" color="gray" highContrast asChild>
+                  <Link href="/#contact-us">Get in Touch</Link>
+                </Button>
+              </div>
+              <div>
+                <Button size="3" variant="outline" asChild>
+                  <Link href="/#our-services">Explore Services</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section
+        id="our-services"
+        className="flex px-6 py-24"
+        style={{ backgroundColor: "#fbfaf9" }}
+      >
+        <div className="max-w-4xl w-full mx-auto">
+          <div className="text-left md:text-right">
+            <div className="mb-12">
+              <Heading mb="2" size="8">
+                Our services
+              </Heading>
+              <Heading size="5" weight="light">
+                What we have to offer
+              </Heading>
+            </div>
+
+            <Text mb="8" size="3" as="p">
+              At Find A Way, we are dedicated to offering a comprehensive range
+              of services to support families and individuals. Our services are
+              tailored to meet the unique needs of each family, empowering them
+              to overcome challenges and thrive. Here's a brief overview of what
+              we offer:
+            </Text>
+          </div>
+          <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
+            {cards.map((card, index) => (
+              <div
+                key={index}
+                className="rounded-2xl shadow-md p-6 bg-gray-50 hover:shadow-lg transition-shadow"
+              >
+                <div className="relative h-[200px] mb-4">
+                  <Image
+                    src={card.image}
+                    alt={card.alt}
+                    fill
+                    className="object-contain p-2"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
+                <p className="text-gray-700 text-base">{card.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="our-team" className="py-24 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="mb-20">
+            <Heading mb="2" size="8">
+              Our team
+            </Heading>
+            <Heading size="5" weight="light">
+              Meet the people behind Find A Way
+            </Heading>
+          </div>
+
+          <div className="flex flex-col md:flex-row items-center mb-16 gap-8">
+            <img
+              src="/stock-image-person.jpg"
+              alt="Person 1"
+              className="w-48 h-48 object-cover rounded-full"
+            />
+            <div>
+              <h3 className="text-xl font-semibold">Dr Sophia Bentley</h3>
+              <p className="text-gray-500 mb-2">Educational Psycgologist</p>
+              <p className="text-gray-700 mb-3">
+                Sophia is founder and director of Find A Way. She brings a
+                decade of experience working with families and young people in
+                community and clinical settings.
+              </p>
+              <div className="mt-8 flex gap-4 text-black">
+                <Link
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaFacebook className="w-5 h-5 hover:text-gray-700" />
+                </Link>
+                <Link
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram className="w-5 h-5 hover:text-gray-700" />
+                </Link>
+                <Link
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaTwitter className="w-5 h-5 hover:text-gray-700" />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row-reverse items-center mb-16 gap-8">
+            <img
+              src="/stock-image-person.jpg"
+              alt="Person 1"
+              className="w-48 h-48 object-cover rounded-full"
+            />
+            <div>
+              <h3 className="text-xl font-semibold">Laura Andrews</h3>
+              <p className="text-gray-500 mb-2">Role</p>
+              <p className="text-gray-700 mb-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                ut aliquip ex ea commodo consequat.
+              </p>
+              <div className="mt-8 flex gap-4 text-black">
+                <Link
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaFacebook className="w-5 h-5 hover:text-gray-700" />
+                </Link>
+                <Link
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram className="w-5 h-5 hover:text-gray-700" />
+                </Link>
+                <Link
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaTwitter className="w-5 h-5 hover:text-gray-700" />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row items-center mb-16 gap-8">
+            <img
+              src="/stock-image-person.jpg"
+              alt="Person 1"
+              className="w-48 h-48 object-cover rounded-full"
+            />
+            <div>
+              <h3 className="text-xl font-semibold">Hannah Flaherty</h3>
+              <p className="text-gray-500 mb-2">Role</p>
+              <p className="text-gray-700 mb-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                ut aliquip ex ea commodo consequat.
+              </p>
+              <div className="mt-8 flex gap-4 text-black">
+                <Link
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaFacebook className="w-5 h-5 hover:text-gray-700" />
+                </Link>
+                <Link
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram className="w-5 h-5 hover:text-gray-700" />
+                </Link>
+                <Link
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaTwitter className="w-5 h-5 hover:text-gray-700" />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row-reverse items-center gap-8">
+            <img
+              src="/stock-image-person.jpg"
+              alt="Person 1"
+              className="w-48 h-48 object-cover rounded-full"
+            />
+            <div>
+              <h3 className="text-xl font-semibold">Louise Hilder</h3>
+              <p className="text-gray-500 mb-2">Role</p>
+              <p className="text-gray-700 mb-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                ut aliquip ex ea commodo consequat.
+              </p>
+              <div className="mt-8 flex gap-4 text-black">
+                <Link
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaFacebook className="w-5 h-5 hover:text-gray-700" />
+                </Link>
+                <Link
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram className="w-5 h-5 hover:text-gray-700" />
+                </Link>
+                <Link
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaTwitter className="w-5 h-5 hover:text-gray-700" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Funding Section */}
+      <section id="about-us" className="flex px-6 py-24 bg-white">
+        <div className="max-w-4xl w-full mx-auto">
+          <div className="flex flex-col-reverse md:flex-row">
+            <div className="flex-1 mt-12 md:mt-0 md:mr-24">
+              <div className="relative min-h-[200px]">
+                <Image
+                  src="/national-lottery-logo.png"
+                  alt="National Lottery"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <p className="text-sm text-gray-600 text-center mt-4">
+                Proudly funded by{" "}
+                <span className="font-medium">The National Lottery</span>
+              </p>
+            </div>
+            <div className="flex-1 text-left md:text-right">
+              <div className="mb-12">
+                <Heading mb="2" size="8">
+                  Funding
+                </Heading>
+                <Heading size="5" weight="light">
+                  We are a Community Interest Company (CIC)
+                </Heading>
+              </div>
+              <Text size="3" as="p">
+                Find A Way operates under a not-for-profit model as a CIC
+                (company no.{" "}
+                <Link
+                  href="https://find-and-update.company-information.service.gov.uk/company/15992869"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  15992869
+                </Link>
+                ). We are funded partially by grants and partially by our
+                private practice. We are proud to have received our first grant
+                in 2025 from the National Lottery. If you would like to help
+                with funding, volunteer your time or resources, or otherwise get
+                involved and help our cause, please contact us.
+              </Text>
+              <br />
+              <div className="flex justify-start md:justify-end mt-8">
+                <div className="flex flex-row">
+                  <div className="mr-2">
+                    <Button size="3" color="gray" highContrast asChild>
+                      <Link href="/#contact-us">Get Involved</Link>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <form
+        action="https://usebasin.com/f/e642cdee668f"
+        method="POST"
+        encType="multipart/form-data"
+        id="form"
+      >
+        <label htmlFor="name">Name</label>
+        <input type="text" name="name" />
+        <label htmlFor="email">Email</label>
+        <input type="email" name="email" required />
+        <label htmlFor="message">Message</label>
+        <textarea name="message"></textarea>
+        <label htmlFor="checkbox1">Checkbox</label>
+        <input type="checkbox" name="checkbox1" />
+        <label htmlFor="checkbox2">Checkbox</label>
+        <input type="checkbox" name="checkbox2" />
+        <label htmlFor="radio1">Radio1</label>
+        <input id="radio1" type="radio" name="radio" value="radio1" checked />
+        <label htmlFor="radio2">Radio2</label>
+        <input id="radio2" type="radio" name="radio" value="radio2" />
+        <label htmlFor="file-upload">File Upload</label>
+        <input type="file" name="file-upload" />
+        <button type="submit">Send</button>
+      </form> */}
+
+      <section id="contact-us" className="flex px-6 py-24 bg-gray-50">
+        <div className="max-w-4xl w-full mx-auto ">
+          <div className="mb-12">
+            <Heading mb="2" size="8">
+              Contact us
+            </Heading>
+            <Heading size="5" weight="light">
+              Thank you for messaging us, we will be in touch shortly!
+            </Heading>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section
+      <section id="contact-us" className="flex px-6 py-24 bg-gray-50">
+        <div className="max-w-4xl w-full mx-auto ">
+          <div className="mb-12">
+            <Heading mb="2" size="8">
+              Contact us
+            </Heading>
+            <Heading size="5" weight="light">
+              Thank you for visiting our site, let's keep in touch!
+            </Heading>
+          </div>
+          <Text mb="8" size="3" as="p">
+            If you have any questions or would like to learn more about how we
+            can support you and your family or a family you would like to refer,
+            please don't hesitate to get in touch. Drop us an email at{" "}
+            <a
+              href="mailto:hello@findaway.org"
+              className="text-blue-600 hover:underline"
+            >
+              hello@findaway.org
+            </a>{" "}
+            or use the contact form below. We are here to listen, provide
+            guidance, and work together to find the best solutions for your
+            needs. Feel free to contact us in confidence, and without any
+            obligation.
+          </Text>
+          <br />
+
+          <form
+            className="max-w"
+            action="https://usebasin.com/f/e6fae10f0547"
+            method="POST"
+          >
+            <div className="mb-5">
+              <label htmlFor="first-name" className="block mb-2">
+                <Text size="3" as="p">
+                  Name
+                </Text>
+              </label>
+              <input
+                name="name"
+                type="text"
+                id="first-name"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Your name"
+              ></input>
+            </div>
+            <div className="mb-5">
+              <label htmlFor="first-name" className="block mb-2">
+                <Text size="3" as="p">
+                  Email
+                </Text>
+              </label>
+              <input
+                name="email"
+                type="email"
+                id="email"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="name@email.com"
+                required
+              />
+            </div>
+            <div className="mb-5">
+              <label htmlFor="first-name" className="block mb-2">
+                <Text size="3" as="p">
+                  Subject
+                </Text>
+              </label>
+              <input
+                name="subject"
+                type="text"
+                id="subject"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Your name"
+              ></input>
+            </div>
+            <div className="mb-12">
+              <label htmlFor="first-name" className="block mb-2">
+                <Text size="3" as="p">
+                  Message
+                </Text>
+              </label>
+              <textarea
+                name="message"
+                id="message"
+                rows={4}
+                className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Write your message..."
+              ></textarea>
+
+              <Text mt="2" size="2" as="p">
+                We’ll never share your details. Read our{" "}
+                <a
+                  href="/privacy-policy"
+                  className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                >
+                  Privacy Policy.
+                </a>
+              </Text>
+            </div>
+
+            <Button size="3" color="gray" highContrast asChild>
+              <button type="submit">Submit</button>
+            </Button>
+          </form>
+        </div>
+      </section> */}
+    </main>
+  );
+};
+
+export default Home;

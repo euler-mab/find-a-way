@@ -1,37 +1,119 @@
 "use client";
 
+import React, { useState } from "react";
 import Link from "next/link";
-import React from "react";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import classnames from "classnames";
+import * as NavigationMenu from "@radix-ui/react-navigation-menu";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { Box, Button, Container } from "@radix-ui/themes";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const NavBar = () => {
+  const [open, setOpen] = useState(false);
+
   const currentPath = usePathname();
   const links = [
-    { label: "About", href: "/about" },
-    { label: "Services", href: "/services" },
-    { label: "Our People", href: "/our-people" },
-    { label: "EP Practice", href: "/ep-practice" },
-    { label: "Contact Us", href: "/contact-us" },
+    { label: "About Us", href: "/#about-us" },
+    { label: "Our Services", href: "/#our-services" },
+    { label: "Our Team", href: "/#our-team" },
+    { label: "Private Practice", href: "/private-practice" },
+    { label: "News", href: "/news" },
+    { label: "Contact", href: "/#contact-us" },
   ];
+  const linkComponents = links.map((link) => (
+    <NavigationMenu.Link
+      key={link.href}
+      className={classnames({
+        "text-zink-900": link.href === currentPath,
+        "text-zinc-500": link.href !== currentPath,
+        "hover:text-zinc-800 transition-colors": true,
+      })}
+      href={link.href}
+    >
+      {link.label}
+    </NavigationMenu.Link>
+  ));
+
+  const socialLinks = (
+    <div className="flex gap-4 text-black">
+      <Link
+        href="https://facebook.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaFacebook className="w-5 h-5 hover:text-gray-700" />
+      </Link>
+      <Link
+        href="https://instagram.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaInstagram className="w-5 h-5 hover:text-gray-700" />
+      </Link>
+      <Link
+        href="https://twitter.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaTwitter className="w-5 h-5 hover:text-gray-700" />
+      </Link>
+    </div>
+  );
+
   return (
-    <nav className="flex space-x-8 border-b mb-5 px-5 h-14 items-center">
-      <Link href="/">Logo</Link>
-      <ul className="flex  space-x-8">
-        {links.map((link) => (
-          <Link
-            key={link.href}
-            className={classnames({
-              "text-zink-900": link.href === currentPath,
-              "text-zinc-500": link.href !== currentPath,
-              "hover:text-zinc-800 transition-colors": true,
-            })}
-            href={link.href}
-          >
-            {link.label}
-          </Link>
-        ))}
-      </ul>
+    <nav
+      className="sticky top-0 z-50 shadow-2xs"
+      style={{ backgroundColor: "#f5f5f5" }}
+    >
+      <div className="max-w-6xl w-full mx-auto px-4 py-4">
+        <div className="flex items-center justify-between w-full">
+          <div className="flex items-center">
+            <Link href="/">
+              <Image
+                src="/find-a-way-logo-2.png"
+                alt="Find A Way logo"
+                width={150} // adjust as needed
+                height={40}
+                className="object-contain"
+              />
+            </Link>
+          </div>
+
+          <NavigationMenu.Root className="hidden md:block">
+            <NavigationMenu.List className="flex space-x-6">
+              {linkComponents}
+            </NavigationMenu.List>
+          </NavigationMenu.Root>
+
+          <div>
+            <div className="hidden md:flex">{socialLinks}</div>
+
+            <div className="md:hidden">
+              <Button
+                variant="outline"
+                onClick={() => setOpen((prev) => !prev)}
+                aria-label="Toggle navigation menu"
+              >
+                {open ? <X size={20} /> : <Menu size={20} />}
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Navigation Menu */}
+        {open && (
+          <div className="md:hidden fixed top-16 left-0 right-0 z-50 p-6 bg-white shadow-md">
+            <NavigationMenu.Root>
+              <NavigationMenu.List className="flex flex-col gap-y-8">
+                {linkComponents}
+                {socialLinks}
+              </NavigationMenu.List>
+            </NavigationMenu.Root>
+          </div>
+        )}
+      </div>
     </nav>
   );
 };
