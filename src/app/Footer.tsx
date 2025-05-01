@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer style={{ backgroundColor: "#f5f5f5" }}>
+    <footer style={{ backgroundColor: "#d4d4d4" }}>
       <div className="max-w-6xl w-full mx-auto px-4 py-16">
         <div className="flex flex-col md:flex-row">
           {/* Column 1 (2x width) */}

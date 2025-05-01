@@ -14,6 +14,7 @@ const Home = () => {
         "VIG is an evidence-based intervention that uses video feedback to improve communication and relationships between parents or carers and children. By reviewing short video clips of positive interactions, families can reflect on their strengths and develop new ways to enhance their connections.",
       image: "/vig.png",
       alt: "Video Interactive Guidance (VIG) logo",
+      link: "/services/video-interactive-guidance",
     },
     {
       title: "Parent Support Groups",
@@ -21,6 +22,7 @@ const Home = () => {
         "Our Parent Support Groups provide a safe and welcoming space for parents to connect, share experiences, and receive guidance on a range of issues, from parenting challenges to emotional support. These groups foster a sense of community while offering practical advice from our experienced facilitators.",
       image: "/support-group.png",
       alt: "Parent Support Groups",
+      link: "/services/parent-support-groups",
     },
     {
       title: "Strength-Based Interventions",
@@ -28,6 +30,7 @@ const Home = () => {
         "Our strength-based interventions focus on identifying and building upon the unique strengths of each family and individual. This positive approach empowers families to harness their abilities and resources to overcome challenges and promote well-being, rather than focusing solely on areas of need.",
       image: "/strength.png",
       alt: "Video Interactive Guidance (VIG) logo",
+      link: "/services/strength-based-interventions",
     },
     {
       title: "One-to-One Consultations",
@@ -35,6 +38,7 @@ const Home = () => {
         "We offer individual consultations for parents, carers, and families seeking personalised advice and support. These sessions provide an opportunity to discuss specific concerns about your child's development, emotional well-being, and behaviour. Our consultations are designed to offer problem-solving strategies and expert guidance tailored to your unique situation.",
       image: "/consultations.png",
       alt: "Parent Support Groups",
+      link: "/services/one-to-one-consultations",
     },
   ];
 
@@ -44,11 +48,7 @@ const Home = () => {
       <section
         id="hero"
         className="min-h-[80vh] px-6 py-40"
-        style={{
-          backgroundImage:
-            "url('/u8696629956_illustration_stepping_stones_horizon_scandi_--v_6_2a696bc6-b9a6-4b03-9f04-a01febe9baa9_3.png')",
-          backgroundSize: "100%",
-        }}
+        style={{ background: "white" }}
       >
         <div className="max-w-4xl w-full mx-auto ">
           <Hero />
@@ -59,11 +59,7 @@ const Home = () => {
       <section
         id="about-us"
         className="flex px-6 py-24"
-        style={
-          {
-            // backgroundColor: "#f5f5f5",
-          }
-        }
+        style={{ backgroundColor: "#f5f5f5" }}
       >
         <div className="max-w-4xl w-full mx-auto ">
           <div className="mb-12">
@@ -145,7 +141,7 @@ const Home = () => {
       <section
         id="our-services"
         className="flex px-6 py-24"
-        style={{ backgroundColor: "#fbfaf9" }}
+        // style={{ backgroundColor: "#fbfaf9" }}
       >
         <div className="max-w-4xl w-full mx-auto">
           <div className="text-left md:text-right">
@@ -170,7 +166,8 @@ const Home = () => {
             {cards.map((card, index) => (
               <div
                 key={index}
-                className="rounded-2xl shadow-md p-6 bg-gray-50 hover:shadow-lg transition-shadow"
+                className="rounded-2xl shadow-md p-6 hover:shadow-lg transition-shadow flex flex-col"
+                style={{ backgroundColor: "#fbfaf9" }}
               >
                 <div className="relative h-[200px] mb-4">
                   <Image
@@ -181,14 +178,25 @@ const Home = () => {
                   />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
-                <p className="text-gray-700 text-base">{card.description}</p>
+                <p className="text-gray-700 text-base mb-4">
+                  {card.description}
+                </p>
+                <div className="mt-auto flex justify-end">
+                  <Button size="3" color="gray" highContrast asChild>
+                    <Link href={card.link}>Read more</Link>
+                  </Button>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="our-team" className="py-24 bg-gray-50">
+      <section
+        id="our-team"
+        className="py-24"
+        style={{ backgroundColor: "#f5f5f5" }}
+      >
         <div className="max-w-4xl mx-auto px-4">
           <div className="mb-20">
             <Heading mb="2" size="8">
@@ -444,7 +452,11 @@ const Home = () => {
         <button type="submit">Send</button>
       </form> */}
 
-      <section id="contact-us" className="flex px-6 py-24 bg-gray-50">
+      {/* <section
+        id="contact-us"
+        className="flex px-6 py-24"
+        style={{ backgroundColor: "#f5f5f5" }}
+      >
         <div className="max-w-4xl w-full mx-auto ">
           <div className="mb-12">
             <Heading mb="2" size="8">
@@ -455,10 +467,14 @@ const Home = () => {
             </Heading>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Contact Section
-      <section id="contact-us" className="flex px-6 py-24 bg-gray-50">
+      {/* Contact Section */}
+      <section
+        id="contact-us"
+        className="flex px-6 py-24"
+        style={{ backgroundColor: "#f5f5f5" }}
+      >
         <div className="max-w-4xl w-full mx-auto ">
           <div className="mb-12">
             <Heading mb="2" size="8">
@@ -563,7 +579,7 @@ const Home = () => {
             </Button>
           </form>
         </div>
-      </section> */}
+      </section>
     </main>
   );
 };

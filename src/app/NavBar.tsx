@@ -72,10 +72,10 @@ const NavBar = () => {
           <div className="flex items-center">
             <Link href="/">
               <Image
-                src="/find-a-way-logo-2.png"
+                src="/find-a-way-logo-4.png"
                 alt="Find A Way logo"
                 width={150} // adjust as needed
-                height={40}
+                height={20}
                 className="object-contain"
               />
             </Link>

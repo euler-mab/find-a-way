@@ -10,7 +10,7 @@ const Hero = () => {
           <div className="flex justify-center items-center">
             <Link href="/">
               <Image
-                src="/find-a-way-logo-2.png"
+                src="/find-a-way-logo-4.png"
                 alt="Find A Way logo"
                 width={350} // adjust as needed
                 height={100}
@@ -38,7 +38,7 @@ const Hero = () => {
                 color="gray"
                 highContrast
                 asChild
-                style={{ backgroundColor: "#6BA8A9" }}
+                // style={{ backgroundColor: "#6BA8A9" }}
               >
                 <Link href="/#contact-us">Contact Us</Link>
               </Button>
