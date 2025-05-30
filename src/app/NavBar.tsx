@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import classnames from "classnames";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { ChevronDown, Menu, X } from "lucide-react";
-import { Box, Button, Container } from "@radix-ui/themes";
+import { Menu, X } from "lucide-react";
+import { Button } from "@radix-ui/themes";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const NavBar = () => {

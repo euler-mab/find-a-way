@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Card, Heading, Table, Text } from "@radix-ui/themes";
 import BackButton from "../components/BackButton";
 
@@ -8,7 +7,7 @@ const PrivatePractice = () => {
       <div className="mb-12">
         <BackButton />
         <Heading mt="4" mb="2" size="8">
-          Private Practice
+          å Private Practice
         </Heading>
         <Heading size="5" weight="light">
           Access our private educational psychology practice

@@ -1,6 +1,5 @@
-import React from "react";
-import { Container, Heading, Text } from "@radix-ui/themes";
 import BackButton from "@/app/components/BackButton";
+import { Heading, Text } from "@radix-ui/themes";
 
 const SchoolsAndEducation = () => {
   return (
