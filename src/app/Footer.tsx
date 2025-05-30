@@ -81,7 +81,7 @@ const Footer = () => {
                 <li>
                   <Text as="span" size="2">
                     <Link
-                      href="https://facebook.com"
+                      href="https://www.facebook.com/share/1HEMMP6LRs"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -92,7 +92,7 @@ const Footer = () => {
                 <li>
                   <Text as="span" size="2">
                     <Link
-                      href="https://instagram.com"
+                      href="https://www.instagram.com/findaway_psychology"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -103,7 +103,7 @@ const Footer = () => {
                 <li>
                   <Text as="span" size="2">
                     <Link
-                      href="https://twitter.com"
+                      href="https://x.com/findawaycic"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
