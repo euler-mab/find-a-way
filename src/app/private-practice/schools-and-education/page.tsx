@@ -1,6 +1,5 @@
-import React from "react";
-import { Container, Heading, Text } from "@radix-ui/themes";
 import BackButton from "@/app/components/BackButton";
+import { Heading, Text } from "@radix-ui/themes";
 
 const SchoolsAndEducation = () => {
   return (
@@ -114,7 +113,7 @@ const SchoolsAndEducation = () => {
       <Text size="3" as="p">
         If you would like more information or wish to discuss your individual
         needs and requirements, please contact us in complete confidence and
-        with no obligation. We're here to help.
+        with no obligation. We&apos;re here to help.
       </Text>
       <br />
     </div>

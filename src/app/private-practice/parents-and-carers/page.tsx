@@ -1,6 +1,5 @@
-import React from "react";
-import { Container, Heading, Text } from "@radix-ui/themes";
 import BackButton from "@/app/components/BackButton";
+import { Heading, Text } from "@radix-ui/themes";
 
 const SchoolsAndEducation = () => {
   return (
@@ -37,8 +36,9 @@ const SchoolsAndEducation = () => {
         <li>
           <Text size="3">
             <span className="font-semibold">Consultations:</span> We meet with
-            parents to discuss concerns about their child's learning, behaviour,
-            or emotional well-being, offering expert advice and guidance.
+            parents to discuss concerns about their child&apos;s learning,
+            behaviour, or emotional well-being, offering expert advice and
+            guidance.
           </Text>
         </li>
         <li>

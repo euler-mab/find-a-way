@@ -1,5 +1,4 @@
-import React from "react";
-import { Button, Heading, Text, Link } from "@radix-ui/themes";
+import { Button, Link, Text } from "@radix-ui/themes";
 import Image from "next/image";
 
 const Hero = () => {
@@ -43,11 +42,12 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Image */}
       <div className="md:w-1/2">
-        <img
+        <Image
           src="/stepping_stones.jpg"
           alt="Illustration of support"
+          width={800} // specify a reasonable width
+          height={600} // specify a reasonable height
           className="w-full h-auto object-contain"
         />
       </div>

@@ -35,7 +35,7 @@ const Home = () => {
     {
       title: "One-to-One Consultations",
       description:
-        "We offer individual consultations for parents, carers, and families seeking personalised advice and support. These sessions provide an opportunity to discuss specific concerns about your child's development, emotional well-being, and behaviour. Our consultations are designed to offer problem-solving strategies and expert guidance tailored to your unique situation.",
+        "We offer individual consultations for parents, carers, and families seeking personalised advice and support. These sessions provide an opportunity to discuss specific concerns about your child&apos;s development, emotional well-being, and behaviour. Our consultations are designed to offer problem-solving strategies and expert guidance tailored to your unique situation.",
       image: "/consultations.png",
       alt: "Parent Support Groups",
       link: "/services/one-to-one-consultations",
@@ -98,8 +98,8 @@ const Home = () => {
 
           <Text size="3" as="p">
             At Find A Way, we believe every family should have the support they
-            need, when they need it, and be part of a community that's there for
-            them.
+            need, when they need it, and be part of a community that&apos;s
+            there for them.
           </Text>
           <br />
           <Text mb="4" size="3" as="p">
@@ -109,8 +109,8 @@ const Home = () => {
             assessments. Our flexible and dynamic approach ensures that we
             respond to the specific needs of families, carers, and children in
             real-time.We understand the importance of early intervention in
-            improving outcomes for families and children. That's why all our
-            interventions are evidence-based and rooted in strength-based
+            improving outcomes for families and children. That&apos;s why all
+            our interventions are evidence-based and rooted in strength-based
             practice, empowering families by focusing on their inherent
             strengths and resources.
           </Text>
@@ -183,8 +183,8 @@ const Home = () => {
               At Find A Way, we are dedicated to offering a comprehensive range
               of services to support families and individuals. Our services are
               tailored to meet the unique needs of each family, empowering them
-              to overcome challenges and thrive. Here's a brief overview of what
-              we offer:
+              to overcome challenges and thrive. Here&apos;s a brief overview of
+              what we offer:
             </Text>
           </div>
           <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
@@ -234,9 +234,11 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col md:flex-row items-center mb-16 gap-8">
-            <img
+            <Image
               src="/sophia.png"
-              alt="Person 1"
+              alt="Sophia"
+              width={192} // 48 * 4 (since Tailwind's w-48 is usually 12rem = 192px)
+              height={192}
               className="w-48 aspect-square object-cover rounded-full"
             />
             <div>
@@ -274,9 +276,11 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col md:flex-row-reverse items-center mb-16 gap-8">
-            <img
+            <Image
               src="/laura.jpeg"
-              alt="Person 1"
+              alt="Laura"
+              width={192} // 48 * 4 (since Tailwind's w-48 is usually 12rem = 192px)
+              height={192}
               className="w-48 aspect-square object-cover rounded-full"
             />
             <div>
@@ -314,11 +318,14 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col md:flex-row items-center mb-16 gap-8">
-            <img
+            <Image
               src="/hannah.jpeg"
-              alt="Person 1"
+              alt="Hannah"
+              width={192} // 48 * 4 (since Tailwind's w-48 is usually 12rem = 192px)
+              height={192}
               className="w-48 aspect-square object-cover rounded-full"
             />
+
             <div>
               <h3 className="text-xl font-semibold">Hannah Flaherty</h3>
               <p className="text-gray-500 mb-2">Role</p>
@@ -354,9 +361,11 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col md:flex-row-reverse items-center gap-8">
-            <img
+            <Image
               src="/louise.jpeg"
-              alt="Person 1"
+              alt="Louise"
+              width={192} // 48 * 4 (since Tailwind's w-48 is usually 12rem = 192px)
+              height={192}
               className="w-48 aspect-square object-cover rounded-full"
             />
             <div>
@@ -511,13 +520,13 @@ const Home = () => {
               Contact us
             </Heading>
             <Heading size="5" weight="light">
-              Thank you for visiting our site, let's keep in touch!
+              Thank you for visiting our site, let&apos;s keep in touch!
             </Heading>
           </div>
           <Text mb="8" size="3" as="p">
             If you have any questions or would like to learn more about how we
             can support you and your family or a family you would like to refer,
-            please don't hesitate to get in touch. Drop us an email at{" "}
+            please don&apos;t hesitate to get in touch. Drop us an email at{" "}
             <a
               href="mailto:hello@findaway.org"
               className="text-blue-600 hover:underline"
