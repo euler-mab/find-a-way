@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Heading, Link, Text } from "@radix-ui/themes";
+import { Heading, Link, Text } from "@radix-ui/themes";
 import Hero from "./components/hero/Hero";
 import { FaInstagram, FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
@@ -244,28 +244,29 @@ const Home = () => {
               <h3 className="text-xl font-semibold">Dr Sophia Bentley</h3>
               <p className="text-gray-500 mb-2">Educational Psycgologist</p>
               <p className="text-gray-700 mb-3">
-                I'm Dr Sophia Bentley, Founder and Managing Director of Find A
-                Way CIC — a community-led organisation dedicated to supporting
-                families with young children. Our aim is simple: to make sure
-                every child has the best possible start in life, no matter their
-                background or circumstances.
+                I&apos;m Dr Sophia Bentley, Founder and Managing Director of
+                Find A Way CIC — a community-led organisation dedicated to
+                supporting families with young children. Our aim is simple: to
+                make sure every child has the best possible start in life, no
+                matter their background or circumstances.
               </p>
               <p className="text-gray-700 mb-3">
-                As an Educational and Child Psychologist with over 15 years'
-                experience working with local authorities, schools, and
-                communities, I've spent my career helping families navigate the
-                early years. I understand how confusing and overwhelming it can
-                be for parents trying to find the right support. That's why I
-                founded Find A Way CIC: to create a space where families can
-                access practical help, feel heard, and build the confidence to
-                move forward in a way that works for them.
+                As an Educational and Child Psychologist with over 15
+                years&apos; experience working with local authorities, schools,
+                and communities, I&apos;ve spent my career helping families
+                navigate the early years. I understand how confusing and
+                overwhelming it can be for parents trying to find the right
+                support. That&apos;s why I founded Find A Way CIC: to create a
+                space where families can access practical help, feel heard, and
+                build the confidence to move forward in a way that works for
+                them.
               </p>
               <p className="text-gray-700 mb-3">
-                As both a professional and a parent, I know that every family's
-                journey is different. My passion is in helping families discover
-                their own path, creating opportunities for children to thrive,
-                and building stronger, more connected communities where no one
-                feels like they're doing it alone.
+                As both a professional and a parent, I know that every
+                family&apos;s journey is different. My passion is in helping
+                families discover their own path, creating opportunities for
+                children to thrive, and building stronger, more connected
+                communities where no one feels like they&apos;re doing it alone.
               </p>
 
               <div className="mt-8 flex gap-4 text-black">

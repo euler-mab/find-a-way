@@ -1,4 +1,4 @@
-import { Button, Link, Text } from "@radix-ui/themes";
+import { Text } from "@radix-ui/themes";
 import PrimaryButton from "../PrimaryButton";
 import SecondaryButton from "../SecondaryButton";
 

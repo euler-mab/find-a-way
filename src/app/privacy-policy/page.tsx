@@ -135,7 +135,7 @@ const PrivacyPolicy = () => {
           Legal obligation — where we must comply with the law (e.g.
           safeguarding, data retention)
         </li>
-        <li>Vital interests — to protect someone's life or wellbeing</li>
+        <li>Vital interests — to protect someone&apos;s life or wellbeing</li>
         <li>Public task — where we deliver services in the public interest</li>
         <li>
           Legitimate interests — to run our services effectively (unless these
@@ -211,8 +211,8 @@ const PrivacyPolicy = () => {
           Withdraw consent at any time (if we are using consent as the basis)
         </li>
         <li>
-          Complain to the Information Commissioner's Office (ICO) if you are
-          unhappy with how your data is handled:
+          Complain to the Information Commissioner&apos;s Office (ICO) if you
+          are unhappy with how your data is handled:
           <br />
           Website:{" "}
           <a
