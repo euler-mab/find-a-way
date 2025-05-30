@@ -1,33 +1,29 @@
-"use client";
+import React from "react";
+import { Heading, Text } from "@radix-ui/themes";
+import BackButton from "../components/BackButton";
 
-import { useEffect } from "react";
-import { Container } from "@radix-ui/themes";
-
-const Blog = () => {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://substack.com/embedjs/embed.js";
-    script.async = true;
-    script.charset = "utf-8";
-    document.body.appendChild(script);
-
-    // Optional cleanup
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
+const News = () => {
   return (
-    <Container size="4">
-      <div className="substack-post-embed" data-id="hello-world">
-        <p lang="en">Hello World! by Sophia Bentley</p>
-        <p>This is my first Substack post.</p>
-        <a data-post-link href="https://findawaycic.substack.com/p/hello-world">
-          Read on Substack
-        </a>
+    <div className="max-w-4xl w-full mx-auto min-h-[80vh] py-24 px-4">
+      <div className="mb-12">
+        <BackButton />
+        <Heading mt="4" mb="2" size="8">
+          News
+        </Heading>
+        <Heading size="5" weight="light">
+          Keep up-to-date with the latest FindAWay news.
+        </Heading>
       </div>
-    </Container>
+
+      <Heading mb="4" mt="8" size="5">
+        Introduction
+      </Heading>
+      <Text size="3" as="p">
+        Coming soon.
+      </Text>
+      <br />
+    </div>
   );
 };
 
-export default Blog;
+export default News;

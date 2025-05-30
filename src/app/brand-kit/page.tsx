@@ -2,7 +2,7 @@ import React from "react";
 import { Heading, Text } from "@radix-ui/themes";
 import BackButton from "../components/BackButton";
 
-const SafeguardingPolicy = () => {
+const BrandKit = () => {
   return (
     <div className="max-w-4xl w-full mx-auto min-h-[80vh] py-24 px-4">
       <div className="mb-12">
@@ -26,4 +26,4 @@ const SafeguardingPolicy = () => {
   );
 };
 
-export default SafeguardingPolicy;
+export default BrandKit;
