@@ -47,11 +47,36 @@ const Home = () => {
       {/* Hero Section */}
       <section
         id="hero"
-        className="min-h-[80vh] px-6 py-40"
-        style={{ background: "white" }}
+        className="min-h-[60vh] px-6 py-40"
+        style={{ background: "#F8F0D1" }}
       >
-        <div className="max-w-4xl w-full mx-auto ">
+        <div className="max-w-6xl w-full mx-auto px-12">
           <Hero />
+        </div>
+      </section>
+
+      {/* Funding Section */}
+      <section
+        id="about-us"
+        className="flex flex-col items-center px-6 py-12"
+        style={{ backgroundColor: "#FBF7E8" }}
+      >
+        <div
+          className="flex flex-col items-center justify-center gap-2"
+          style={{ background: "" }}
+        >
+          <p className="text-sm text-gray-600">
+            Proudly funded by{" "}
+            <span className="font-medium">The National Lottery</span>
+          </p>
+          <div className="relative h-20 w-40">
+            <Image
+              src="/national-lottery-logo.png"
+              alt="National Lottery"
+              fill
+              className="object-contain"
+            />
+          </div>
         </div>
       </section>
 
@@ -59,9 +84,9 @@ const Home = () => {
       <section
         id="about-us"
         className="flex px-6 py-24"
-        style={{ backgroundColor: "#f5f5f5" }}
+        style={{ backgroundColor: "white" }}
       >
-        <div className="max-w-4xl w-full mx-auto ">
+        <div className="max-w-6xl w-full mx-auto px-12">
           <div className="mb-12">
             <Heading mb="2" size="8">
               About us
@@ -141,9 +166,9 @@ const Home = () => {
       <section
         id="our-services"
         className="flex px-6 py-24"
-        // style={{ backgroundColor: "#fbfaf9" }}
+        style={{ backgroundColor: "#F8F0D1" }}
       >
-        <div className="max-w-4xl w-full mx-auto">
+        <div className="max-w-6xl w-full mx-auto px-12">
           <div className="text-left md:text-right">
             <div className="mb-12">
               <Heading mb="2" size="8">
@@ -167,7 +192,7 @@ const Home = () => {
               <div
                 key={index}
                 className="rounded-2xl shadow-md p-6 hover:shadow-lg transition-shadow flex flex-col"
-                style={{ backgroundColor: "#fbfaf9" }}
+                style={{ backgroundColor: "white" }}
               >
                 <div className="relative h-[200px] mb-4">
                   <Image
@@ -192,12 +217,13 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Team Section */}
       <section
         id="our-team"
         className="py-24"
-        style={{ backgroundColor: "#f5f5f5" }}
+        style={{ backgroundColor: "white" }}
       >
-        <div className="max-w-4xl mx-auto px-4">
+        <div className="max-w-6xl w-full mx-auto px-12">
           <div className="mb-20">
             <Heading mb="2" size="8">
               Our team
@@ -209,9 +235,9 @@ const Home = () => {
 
           <div className="flex flex-col md:flex-row items-center mb-16 gap-8">
             <img
-              src="/stock-image-person.jpg"
+              src="/sophia.png"
               alt="Person 1"
-              className="w-48 h-48 object-cover rounded-full"
+              className="w-48 aspect-square object-cover rounded-full"
             />
             <div>
               <h3 className="text-xl font-semibold">Dr Sophia Bentley</h3>
@@ -249,9 +275,9 @@ const Home = () => {
 
           <div className="flex flex-col md:flex-row-reverse items-center mb-16 gap-8">
             <img
-              src="/stock-image-person.jpg"
+              src="/laura.jpeg"
               alt="Person 1"
-              className="w-48 h-48 object-cover rounded-full"
+              className="w-48 aspect-square object-cover rounded-full"
             />
             <div>
               <h3 className="text-xl font-semibold">Laura Andrews</h3>
@@ -289,9 +315,9 @@ const Home = () => {
 
           <div className="flex flex-col md:flex-row items-center mb-16 gap-8">
             <img
-              src="/stock-image-person.jpg"
+              src="/hannah.jpeg"
               alt="Person 1"
-              className="w-48 h-48 object-cover rounded-full"
+              className="w-48 aspect-square object-cover rounded-full"
             />
             <div>
               <h3 className="text-xl font-semibold">Hannah Flaherty</h3>
@@ -329,9 +355,9 @@ const Home = () => {
 
           <div className="flex flex-col md:flex-row-reverse items-center gap-8">
             <img
-              src="/stock-image-person.jpg"
+              src="/louise.jpeg"
               alt="Person 1"
-              className="w-48 h-48 object-cover rounded-full"
+              className="w-48 aspect-square object-cover rounded-full"
             />
             <div>
               <h3 className="text-xl font-semibold">Louise Hilder</h3>
@@ -370,8 +396,12 @@ const Home = () => {
       </section>
 
       {/* Funding Section */}
-      <section id="about-us" className="flex px-6 py-24 bg-white">
-        <div className="max-w-4xl w-full mx-auto">
+      <section
+        id="about-us"
+        className="flex px-6 py-24"
+        style={{ background: "#FBF7E8" }}
+      >
+        <div className="max-w-6xl w-full mx-auto px-12">
           <div className="flex flex-col-reverse md:flex-row">
             <div className="flex-1 mt-12 md:mt-0 md:mr-24">
               <div className="relative min-h-[200px]">
@@ -473,9 +503,9 @@ const Home = () => {
       <section
         id="contact-us"
         className="flex px-6 py-24"
-        style={{ backgroundColor: "#f5f5f5" }}
+        style={{ backgroundColor: "#F8F0D1" }}
       >
-        <div className="max-w-4xl w-full mx-auto ">
+        <div className="max-w-6xl w-full mx-auto px-12">
           <div className="mb-12">
             <Heading mb="2" size="8">
               Contact us

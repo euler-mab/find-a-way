@@ -43,21 +43,30 @@ const NavBar = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaFacebook className="w-5 h-5 hover:text-gray-700" />
+        <FaFacebook
+          className="w-5 h-5 hover:text-gray-700"
+          style={{ color: "#FFAD82" }}
+        />
       </Link>
       <Link
         href="https://instagram.com"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaInstagram className="w-5 h-5 hover:text-gray-700" />
+        <FaInstagram
+          className="w-5 h-5 hover:text-gray-700"
+          style={{ color: "#FFAD82" }}
+        />
       </Link>
       <Link
         href="https://twitter.com"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaTwitter className="w-5 h-5 hover:text-gray-700" />
+        <FaTwitter
+          className="w-5 h-5 hover:text-gray-700"
+          style={{ color: "#FFAD82" }}
+        />
       </Link>
     </div>
   );
@@ -65,7 +74,7 @@ const NavBar = () => {
   return (
     <nav
       className="sticky top-0 z-50 shadow-2xs"
-      style={{ backgroundColor: "#f5f5f5" }}
+      style={{ backgroundColor: "white" }}
     >
       <div className="max-w-6xl w-full mx-auto px-4 py-4">
         <div className="flex items-center justify-between w-full">
