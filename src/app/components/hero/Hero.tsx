@@ -1,23 +1,21 @@
 import { Button, Link, Text } from "@radix-ui/themes";
-import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row items-center gap-12">
-      {/* Text content */}
-      <div className="md:w-1/2 text-center md:text-left">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-whi">
+    <div className="flex flex-row justify-center text-center py-24">
+      <div className="max-w-3xl">
+        <h1 className="text-4xl md:text-5xl font-bold mb-8">
           Helping you navigate the early years
         </h1>
-        <div className="mb-8  text-left">
-          <Text size="3" weight="light" as="p">
+        <div className="mb-8">
+          <Text size="3" as="p">
             We are a community interest company. Our mission is empowering
             families across Yorkshire with accessible psychological support,
             tailored interventions, and community-based care—helping every
             family thrive in a safe, supportive environment.
           </Text>
         </div>
-        <div className="flex flex-row">
+        <div className="flex flex-row justify-center">
           <div className="mr-2">
             <Button
               size="3"
@@ -40,16 +38,6 @@ const Hero = () => {
             </Button>
           </div>
         </div>
-      </div>
-
-      <div className="md:w-1/2">
-        <Image
-          src="/stepping_stones.jpg"
-          alt="Illustration of support"
-          width={800} // specify a reasonable width
-          height={600} // specify a reasonable height
-          className="w-full h-auto object-contain"
-        />
       </div>
     </div>
   );

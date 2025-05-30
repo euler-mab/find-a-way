@@ -47,10 +47,12 @@ const Home = () => {
       {/* Hero Section */}
       <section
         id="hero"
-        className="min-h-[60vh] px-6 py-40"
-        style={{ background: "#F8F0D1" }}
+        className="relative min-h-[80vh] px-6 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url("/background_crop.jpeg")' }}
       >
-        <div className="max-w-6xl w-full mx-auto px-12">
+        <div className="absolute inset-0 bg-white/40 backdrop-blur-xs"></div>
+
+        <div className="relative max-w-6xl w-full mx-auto px-12 flex justify-center min-h-[70vh]">
           <Hero />
         </div>
       </section>
@@ -58,18 +60,15 @@ const Home = () => {
       {/* Funding Section */}
       <section
         id="about-us"
-        className="flex flex-col items-center px-6 py-12"
+        className="flex flex-col items-center px-6 py-4"
         style={{ backgroundColor: "#FBF7E8" }}
       >
-        <div
-          className="flex flex-col items-center justify-center gap-2"
-          style={{ background: "" }}
-        >
-          <p className="text-sm text-gray-600">
+        <div className="flex flex-col items-center justify-center gap-1">
+          <p className="text-md text-gray-600">
             Proudly funded by{" "}
             <span className="font-medium">The National Lottery</span>
           </p>
-          <div className="relative h-20 w-40">
+          <div className="relative h-16 w-32">
             <Image
               src="/national-lottery-logo.png"
               alt="National Lottery"
@@ -251,21 +250,21 @@ const Home = () => {
               </p>
               <div className="mt-8 flex gap-4 text-black">
                 <Link
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/share/1HEMMP6LRs/?mibextid=wwXIfr"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaFacebook className="w-5 h-5 hover:text-gray-700" />
                 </Link>
                 <Link
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/findaway_psychology?igsh=cXZoZ2RkNzJob2c3&utm_source=qr"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaInstagram className="w-5 h-5 hover:text-gray-700" />
                 </Link>
                 <Link
-                  href="https://twitter.com"
+                  href="https://x.com/findawaycic?s=11"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
