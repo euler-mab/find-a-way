@@ -254,7 +254,7 @@ const Home = () => {
             <div>
               <h3 className="text-xl font-semibold">Dr Sophia Bentley</h3>
               <p className="text-gray-500 mb-2">
-                Founding Director &amp; Educational Psycgologist
+                Founding Director &amp; Educational Psychologist
               </p>
               <p className="text-gray-700 mb-3">
                 I&apos;m Dr Sophia Bentley, Founder and Managing Director of
@@ -361,7 +361,7 @@ const Home = () => {
               className="w-48 aspect-square object-cover rounded-full"
             />
             <div>
-              <h3 className="text-xl font-semibold">Louise Hilder</h3>
+              <h3 className="text-xl font-semibold">Louise Carter</h3>
               <p className="text-gray-500 mb-2">Director</p>
               <p className="text-gray-700 mb-3">
                 Louise Carter is a passionate and dedicated Delivery Manager for
