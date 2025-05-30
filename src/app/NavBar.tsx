@@ -39,7 +39,7 @@ const NavBar = () => {
   const socialLinks = (
     <div className="flex gap-4 text-black">
       <Link
-        href="https://facebook.com"
+        href="https://www.facebook.com/share/1HEMMP6LRs"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -49,7 +49,7 @@ const NavBar = () => {
         />
       </Link>
       <Link
-        href="https://instagram.com"
+        href="https://www.instagram.com/findaway_psychology"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -59,7 +59,7 @@ const NavBar = () => {
         />
       </Link>
       <Link
-        href="https://twitter.com"
+        href="https://x.com/findawaycic"
         target="_blank"
         rel="noopener noreferrer"
       >

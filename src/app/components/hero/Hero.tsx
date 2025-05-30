@@ -1,4 +1,6 @@
 import { Button, Link, Text } from "@radix-ui/themes";
+import PrimaryButton from "../PrimaryButton";
+import SecondaryButton from "../SecondaryButton";
 
 const Hero = () => {
   return (
@@ -17,25 +19,10 @@ const Hero = () => {
         </div>
         <div className="flex flex-row justify-center">
           <div className="mr-2">
-            <Button
-              size="3"
-              highContrast
-              asChild
-              style={{ backgroundColor: "#FFAD82" }}
-            >
-              <Link
-                href="/#contact-us"
-                className="no-underline"
-                style={{ textDecoration: "none" }}
-              >
-                Contact Us
-              </Link>
-            </Button>
+            <PrimaryButton href="/#contact-us">Contact Us</PrimaryButton>
           </div>
           <div>
-            <Button size="3" variant="outline">
-              Services
-            </Button>
+            <SecondaryButton href="/#our-services">Services</SecondaryButton>
           </div>
         </div>
       </div>

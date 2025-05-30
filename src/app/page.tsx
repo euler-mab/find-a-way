@@ -5,6 +5,8 @@ import Hero from "./components/hero/Hero";
 import { FaInstagram, FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
 import Image from "next/image";
+import PrimaryButton from "./components/PrimaryButton";
+import SecondaryButton from "./components/SecondaryButton";
 
 const Home = () => {
   const cards = [
@@ -147,14 +149,12 @@ const Home = () => {
           <div className="flex justify-start mt-8">
             <div className="flex flex-row">
               <div className="mr-2">
-                <Button size="3" color="gray" highContrast asChild>
-                  <Link href="/#contact-us">Get in Touch</Link>
-                </Button>
+                <PrimaryButton href="/#contact-us">Get in Touch</PrimaryButton>
               </div>
               <div>
-                <Button size="3" variant="outline" asChild>
-                  <Link href="/#our-services">Explore Services</Link>
-                </Button>
+                <SecondaryButton href="/#our-services">
+                  Services
+                </SecondaryButton>
               </div>
             </div>
           </div>
@@ -205,11 +205,11 @@ const Home = () => {
                 <p className="text-gray-700 text-base mb-4">
                   {card.description}
                 </p>
-                <div className="mt-auto flex justify-end">
+                {/* <div className="mt-auto flex justify-end">
                   <Button size="3" color="gray" highContrast asChild>
                     <Link href={card.link}>Read more</Link>
                   </Button>
-                </div>
+                </div> */}
               </div>
             ))}
           </div>
@@ -232,7 +232,7 @@ const Home = () => {
             </Heading>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center mb-16 gap-8">
+          <div className="flex flex-col md:flex-row items-start mb-16 gap-8">
             <Image
               src="/sophia.png"
               alt="Sophia"
@@ -244,27 +244,47 @@ const Home = () => {
               <h3 className="text-xl font-semibold">Dr Sophia Bentley</h3>
               <p className="text-gray-500 mb-2">Educational Psycgologist</p>
               <p className="text-gray-700 mb-3">
-                Sophia is founder and director of Find A Way. She brings a
-                decade of experience working with families and young people in
-                community and clinical settings.
+                I'm Dr Sophia Bentley, Founder and Managing Director of Find A
+                Way CIC — a community-led organisation dedicated to supporting
+                families with young children. Our aim is simple: to make sure
+                every child has the best possible start in life, no matter their
+                background or circumstances.
               </p>
+              <p className="text-gray-700 mb-3">
+                As an Educational and Child Psychologist with over 15 years'
+                experience working with local authorities, schools, and
+                communities, I've spent my career helping families navigate the
+                early years. I understand how confusing and overwhelming it can
+                be for parents trying to find the right support. That's why I
+                founded Find A Way CIC: to create a space where families can
+                access practical help, feel heard, and build the confidence to
+                move forward in a way that works for them.
+              </p>
+              <p className="text-gray-700 mb-3">
+                As both a professional and a parent, I know that every family's
+                journey is different. My passion is in helping families discover
+                their own path, creating opportunities for children to thrive,
+                and building stronger, more connected communities where no one
+                feels like they're doing it alone.
+              </p>
+
               <div className="mt-8 flex gap-4 text-black">
                 <Link
-                  href="https://www.facebook.com/share/1HEMMP6LRs/?mibextid=wwXIfr"
+                  href="https://www.facebook.com/share/1HEMMP6LRs"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaFacebook className="w-5 h-5 hover:text-gray-700" />
                 </Link>
                 <Link
-                  href="https://www.instagram.com/findaway_psychology?igsh=cXZoZ2RkNzJob2c3&utm_source=qr"
+                  href="https://www.instagram.com/findaway_psychology"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaInstagram className="w-5 h-5 hover:text-gray-700" />
                 </Link>
                 <Link
-                  href="https://x.com/findawaycic?s=11"
+                  href="https://x.com/findawaycic"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -274,7 +294,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row-reverse items-center mb-16 gap-8">
+          <div className="flex flex-col md:flex-row-reverse items-start mb-16 gap-8">
             <Image
               src="/laura.jpeg"
               alt="Laura"
@@ -284,11 +304,29 @@ const Home = () => {
             />
             <div>
               <h3 className="text-xl font-semibold">Laura Andrews</h3>
-              <p className="text-gray-500 mb-2">Role</p>
+              <p className="text-gray-500 mb-2">Social Work Team Manager</p>
               <p className="text-gray-700 mb-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim
-                ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                ut aliquip ex ea commodo consequat.
+                I’m Laura Andrews, Director of Find A Way CIC. With 15 years
+                experience working in children’s safeguarding, I have dedicated
+                my career to working with children and their families where
+                there is a risk of harm and a need for support to ensure
+                children live in a safe environment.
+              </p>
+              <p className="text-gray-700 mb-3">
+                As a Social Work Team Manager, I have a strong belief in
+                empowering parents and caregivers by equipping them with the
+                tools and guidance necessary to support children to reach their
+                full potential. I am committed to creating a collaborative and
+                restorative environment when working with families to achieve
+                the best possible outcome.
+              </p>
+              <p className="text-gray-700 mb-3">
+                Not only do I bring a professional understanding of the
+                challenges parents face, but as a mother of two young children
+                myself, I have a personal appreciation for the complexities of
+                parenting. This blend of professional expertise and my personal
+                experience allows me to approach my work with empathy,
+                compassion, and a deep commitment to helping families succeed.
               </p>
               <div className="mt-8 flex gap-4 text-black">
                 <Link
@@ -316,7 +354,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center mb-16 gap-8">
+          <div className="flex flex-col md:flex-row items-start mb-16 gap-8">
             <Image
               src="/hannah.jpeg"
               alt="Hannah"
@@ -327,11 +365,26 @@ const Home = () => {
 
             <div>
               <h3 className="text-xl font-semibold">Hannah Flaherty</h3>
-              <p className="text-gray-500 mb-2">Role</p>
+              <p className="text-gray-500 mb-2">Civil Servant</p>
               <p className="text-gray-700 mb-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim
-                ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                ut aliquip ex ea commodo consequat.
+                I&#39;m Hannah Flaherty Moftakhar, a Civil Servant working on
+                Major Rail Projects where I lead on engagement and strategy. I
+                have over 15 years experience managing relationships and am
+                responsible for building and maintaining connections with key
+                stakeholders, understanding their needs and concerns, and
+                actively engaging with them through a project.
+              </p>
+              <p className="text-gray-700 mb-3">
+                I passionately believe in the power of community, which can help
+                parents to be more resilient when faced with challenges,
+                especially in the early years of parenting. I hope that by being
+                part of Find A Way I can use my project delivery skills to help
+                parents to develop strong, long-lasting relationships with their
+                children.
+              </p>
+              <p className="text-gray-700 mb-3">
+                Outside of work I am a busy mum of twin toddlers, a keen foodie
+                (cooking and eating) and a novice runner.
               </p>
               <div className="mt-8 flex gap-4 text-black">
                 <Link
@@ -359,7 +412,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row-reverse items-center gap-8">
+          <div className="flex flex-col md:flex-row-reverse items-start gap-8">
             <Image
               src="/louise.jpeg"
               alt="Louise"
@@ -369,11 +422,31 @@ const Home = () => {
             />
             <div>
               <h3 className="text-xl font-semibold">Louise Hilder</h3>
-              <p className="text-gray-500 mb-2">Role</p>
+              <p className="text-gray-500 mb-2">Delivery Manager</p>
               <p className="text-gray-700 mb-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim
-                ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                ut aliquip ex ea commodo consequat.
+                Louise Carter is a passionate and dedicated Delivery Manager for
+                a leading Financial Services firm, where she works across the
+                Development and Data teams to manage products through their
+                lifecycle and ensures successful delivery to the business. With
+                a solid background in project management, Louise has a wealth of
+                experience delivering key business projects.
+              </p>
+              <p className="text-gray-700 mb-3">
+                Outside of her professional career, Louise is a committed
+                advocate for postnatal care and believes in equal access to
+                services and education, regardless of location or financial
+                status. As Chair of the Parent Teacher Association (PTA) at her
+                children&#39;s primary school, she works closely with both the
+                school and parents to raise funds that enhance the
+                children&#39;s school experience.
+              </p>
+              <p className="text-gray-700 mb-3">
+                A proud mother of two beautiful boys, Louise is keen to get
+                involved in supporting others during the early years. Having
+                joined NCT during her first pregnancy, the network and support
+                she received during the postnatal period were invaluable, and
+                she is passionate about ensuring all families have access to
+                social and professional support.
               </p>
               <div className="mt-8 flex gap-4 text-black">
                 <Link
@@ -454,9 +527,9 @@ const Home = () => {
               <div className="flex justify-start md:justify-end mt-8">
                 <div className="flex flex-row">
                   <div className="mr-2">
-                    <Button size="3" color="gray" highContrast asChild>
-                      <Link href="/#contact-us">Get Involved</Link>
-                    </Button>
+                    <PrimaryButton href="/#contact-us">
+                      Get Involved
+                    </PrimaryButton>
                   </div>
                 </div>
               </div>
@@ -612,9 +685,9 @@ const Home = () => {
               </Text>
             </div>
 
-            <Button size="3" color="gray" highContrast asChild>
+            <PrimaryButton href="/#contact-us">
               <button type="submit">Submit</button>
-            </Button>
+            </PrimaryButton>
           </form>
         </div>
       </section>
