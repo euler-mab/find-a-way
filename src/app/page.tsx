@@ -2,8 +2,6 @@
 
 import { Heading, Link, Text } from "@radix-ui/themes";
 import Hero from "./components/hero/Hero";
-import { FaInstagram, FaTwitter } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa6";
 import Image from "next/image";
 import PrimaryButton from "./components/PrimaryButton";
 import SecondaryButton from "./components/SecondaryButton";
@@ -12,8 +10,21 @@ const Home = () => {
   const cards = [
     {
       title: "Video Interactive Guidance (VIG)",
-      description:
-        "VIG is an evidence-based intervention that uses video feedback to improve communication and relationships between parents or carers and children. By reviewing short video clips of positive interactions, families can reflect on their strengths and develop new ways to enhance their connections.",
+      description: (
+        <>
+          VIG is an evidence-based intervention that uses video feedback to
+          improve communication and relationships between parents or carers and
+          children. By reviewing short video clips of positive interactions,
+          families can reflect on their strengths and develop new ways to
+          enhance their connections.{" "}
+          <Link
+            href="/services/video-interactive-guidance"
+            className="!text-blue-600 hover:!text-blue-800 underline"
+          >
+            Read more.
+          </Link>
+        </>
+      ),
       image: "/vig.png",
       alt: "Video Interactive Guidance (VIG) logo",
       link: "/services/video-interactive-guidance",
@@ -242,13 +253,12 @@ const Home = () => {
             />
             <div>
               <h3 className="text-xl font-semibold">Dr Sophia Bentley</h3>
-              <p className="text-gray-500 mb-2">Educational Psycgologist</p>
+              <p className="text-gray-500 mb-2">
+                Founding Director &amp; Educational Psycgologist
+              </p>
               <p className="text-gray-700 mb-3">
                 I&apos;m Dr Sophia Bentley, Founder and Managing Director of
-                Find A Way CIC — a community-led organisation dedicated to
-                supporting families with young children. Our aim is simple: to
-                make sure every child has the best possible start in life, no
-                matter their background or circumstances.
+                Find A Way CIC.
               </p>
               <p className="text-gray-700 mb-3">
                 As an Educational and Child Psychologist with over 15
@@ -268,30 +278,6 @@ const Home = () => {
                 children to thrive, and building stronger, more connected
                 communities where no one feels like they&apos;re doing it alone.
               </p>
-
-              <div className="mt-8 flex gap-4 text-black">
-                <Link
-                  href="https://www.facebook.com/share/1HEMMP6LRs"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaFacebook className="w-5 h-5 hover:text-gray-700" />
-                </Link>
-                <Link
-                  href="https://www.instagram.com/findaway_psychology"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaInstagram className="w-5 h-5 hover:text-gray-700" />
-                </Link>
-                <Link
-                  href="https://x.com/findawaycic"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaTwitter className="w-5 h-5 hover:text-gray-700" />
-                </Link>
-              </div>
             </div>
           </div>
 
@@ -305,13 +291,13 @@ const Home = () => {
             />
             <div>
               <h3 className="text-xl font-semibold">Laura Andrews</h3>
-              <p className="text-gray-500 mb-2">Social Work Team Manager</p>
+              <p className="text-gray-500 mb-2">Director</p>
               <p className="text-gray-700 mb-3">
-                I’m Laura Andrews, Director of Find A Way CIC. With 15 years
-                experience working in children’s safeguarding, I have dedicated
-                my career to working with children and their families where
-                there is a risk of harm and a need for support to ensure
-                children live in a safe environment.
+                I&apos;m Laura Andrews, with 15 years experience working in
+                children&apos;s safeguarding, I have dedicated my career to
+                working with children and their families where there is a risk
+                of harm and a need for support to ensure children live in a safe
+                environment.
               </p>
               <p className="text-gray-700 mb-3">
                 As a Social Work Team Manager, I have a strong belief in
@@ -329,29 +315,6 @@ const Home = () => {
                 experience allows me to approach my work with empathy,
                 compassion, and a deep commitment to helping families succeed.
               </p>
-              <div className="mt-8 flex gap-4 text-black">
-                <Link
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaFacebook className="w-5 h-5 hover:text-gray-700" />
-                </Link>
-                <Link
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaInstagram className="w-5 h-5 hover:text-gray-700" />
-                </Link>
-                <Link
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaTwitter className="w-5 h-5 hover:text-gray-700" />
-                </Link>
-              </div>
             </div>
           </div>
 
@@ -363,10 +326,9 @@ const Home = () => {
               height={192}
               className="w-48 aspect-square object-cover rounded-full"
             />
-
             <div>
               <h3 className="text-xl font-semibold">Hannah Flaherty</h3>
-              <p className="text-gray-500 mb-2">Civil Servant</p>
+              <p className="text-gray-500 mb-2">Director</p>
               <p className="text-gray-700 mb-3">
                 I&#39;m Hannah Flaherty Moftakhar, a Civil Servant working on
                 Major Rail Projects where I lead on engagement and strategy. I
@@ -387,29 +349,6 @@ const Home = () => {
                 Outside of work I am a busy mum of twin toddlers, a keen foodie
                 (cooking and eating) and a novice runner.
               </p>
-              <div className="mt-8 flex gap-4 text-black">
-                <Link
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaFacebook className="w-5 h-5 hover:text-gray-700" />
-                </Link>
-                <Link
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaInstagram className="w-5 h-5 hover:text-gray-700" />
-                </Link>
-                <Link
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaTwitter className="w-5 h-5 hover:text-gray-700" />
-                </Link>
-              </div>
             </div>
           </div>
 
@@ -423,7 +362,7 @@ const Home = () => {
             />
             <div>
               <h3 className="text-xl font-semibold">Louise Hilder</h3>
-              <p className="text-gray-500 mb-2">Delivery Manager</p>
+              <p className="text-gray-500 mb-2">Director</p>
               <p className="text-gray-700 mb-3">
                 Louise Carter is a passionate and dedicated Delivery Manager for
                 a leading Financial Services firm, where she works across the
@@ -449,29 +388,6 @@ const Home = () => {
                 she is passionate about ensuring all families have access to
                 social and professional support.
               </p>
-              <div className="mt-8 flex gap-4 text-black">
-                <Link
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaFacebook className="w-5 h-5 hover:text-gray-700" />
-                </Link>
-                <Link
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaInstagram className="w-5 h-5 hover:text-gray-700" />
-                </Link>
-                <Link
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaTwitter className="w-5 h-5 hover:text-gray-700" />
-                </Link>
-              </div>
             </div>
           </div>
         </div>

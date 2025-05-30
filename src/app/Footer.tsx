@@ -103,7 +103,7 @@ const Footer = () => {
                 <li>
                   <Text as="span" size="2">
                     <Link
-                      href="https://x.com/findawaycic"
+                      href="https://x.com/findaway_psych"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

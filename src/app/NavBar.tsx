@@ -59,7 +59,7 @@ const NavBar = () => {
         />
       </Link>
       <Link
-        href="https://x.com/findawaycic"
+        href="https://x.com/findaway_psych"
         target="_blank"
         rel="noopener noreferrer"
       >
